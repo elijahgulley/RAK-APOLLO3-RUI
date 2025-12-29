@@ -123,6 +123,22 @@ bool RAKLoraP2P::ptp::set(uint8_t value) {
         return false;
     }
 }
+
+//set RxDutyCycle
+bool RAKLoraP2P::setRxDutyCycle(uint32_t rx_duty_cycle_on, uint32_t rx_duty_cycle_off) 
+{
+    if (SERVICE_LORAWAN == service_lora_p2p_get_nwm())
+    {
+        return false;
+    }
+
+    if (service_lora_p2p_set_rx_duty_cycle(rx_duty_cycle_on, rx_duty_cycle_off)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 //psend
 bool RAKLoraP2P::psend(uint8_t length, uint8_t *payload) {
     if (SERVICE_LORAWAN == service_lora_p2p_get_nwm())

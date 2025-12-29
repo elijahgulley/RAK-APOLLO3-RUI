@@ -229,6 +229,7 @@ int32_t service_lora_p2p_set_CAD(bool enable);
 
 bool service_lora_p2p_get_radio_stat(void);
 
+bool service_lora_p2p_set_rx_duty_cycle(uint32_t rx_duty_cycle_on, uint32_t rx_duty_cycle_off);
 
 #ifdef __cplusplus
 }

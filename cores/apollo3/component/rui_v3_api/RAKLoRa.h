@@ -1745,6 +1745,7 @@ public:
   bool psend(uint8_t length, uint8_t *payload);
   bool psend(uint8_t length, uint8_t *payload,bool cad_enable);
 
+  bool setRxDutyCycle(uint32_t rx_duty_cycle_on, uint32_t rx_duty_cycle_off);
 
   /**@par   Description
      *          This API is used to register a callback function,
