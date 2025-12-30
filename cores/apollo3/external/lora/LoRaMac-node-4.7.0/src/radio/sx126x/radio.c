@@ -1109,6 +1109,9 @@ void RadioRxBoosted( uint32_t timeout )
 
 void RadioSetRxDutyCycle( uint32_t rxTime, uint32_t sleepTime )
 {
+    SX126xSetDioIrqParams(IRQ_RADIO_ALL | IRQ_RX_TX_TIMEOUT,
+						  IRQ_RADIO_ALL | IRQ_RX_TX_TIMEOUT,
+						  IRQ_RADIO_NONE, IRQ_RADIO_NONE);
     SX126xSetRxDutyCycle( rxTime, sleepTime );
 }
 

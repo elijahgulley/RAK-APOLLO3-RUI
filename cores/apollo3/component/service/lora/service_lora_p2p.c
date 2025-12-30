@@ -1160,6 +1160,7 @@ void radio_set_syncword( uint16_t syncword)
 
 bool service_lora_p2p_set_rx_duty_cycle(uint32_t rx_duty_cycle_on, uint32_t rx_duty_cycle_off)
 {
+    Radio.Standby();
     Radio.SetRxDutyCycle(rx_duty_cycle_on, rx_duty_cycle_off);
     return true;
 }
